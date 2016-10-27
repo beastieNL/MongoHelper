@@ -11,7 +11,7 @@ class MongoHelper
         #    [], 
         #    ['typeMap' => ['root' => 'array', 'document' => 'array', 'array' => 'array']]);
 
-        $mongo = new \MongoDB\Client("mongodb://".$username.":".$password."@127.0.0.1/".$database);
+        $mongo = new \MongoDB\Client("mongodb://".$username.":".$password."@127.0.0.1/");
         $this->db = $mongo->$database;
     }
 
