@@ -99,10 +99,10 @@ class MongoHelper
          * use 0 as 'n', a simple index to match all chunks
          */
         $var = $collection.'.chunks';
-        if (filesize($tmpFile) > 15000000 ){ 
+        if (filesize($file) > 15000000 ){ 
             $contents = '';
 
-            $handle = fopen($tmpFile, "r");
+            $handle = fopen($file, "r");
             $counter =0;
 
             while (!feof($handle)) {
