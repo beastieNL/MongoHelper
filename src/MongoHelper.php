@@ -69,7 +69,7 @@ class MongoHelper
 
     public function update($collection, $identifier, $data, $upsert = false)
     {
-        if (isset($data['_id'])) {
+        if (array_key_exists('_id',$data)) {
             unset($data['_id']);
         }
         $upsertCriteria = ($upsert) ? array("upsert" => true) : array();
